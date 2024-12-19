@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <title>welcome</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        
+        function toggleDropdown() {
+            document.getElementById('dropdownMenu').classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-cover bg-center h-screen" style="background-image: url('https://st4.depositphotos.com/3930503/19991/i/450/depositphotos_199910082-stock-photo-light-blue-gradient-background-blue.jpg');">
+    {% block content %}
+    {% include "navbar.html"%}
+    <form>
+    <div class="w-full relative flex align-center justify-center mt-12 ">
+        <h1>Check Your Weather</h1>
+    </div >
+   <button type="submit" class="w-full  absolute flex align-center justify-center ">
+   <a href="{% url 'weather'%}" class="rounded-md px-3 py-2 text-sm font-semibold text-black bg-blue-400 hover:bg-green-400 hover:text-white">weather</a> 
+   </button>
+</form>
+    {% comment %} <h1>username= {{ user.username}}</h1>
+    <h1>email= {{ user.email}}</h1> {% endcomment %}
+    {% endblock content %}
+</body>
+</html>

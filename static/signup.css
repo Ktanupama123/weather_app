@@ -1,0 +1,57 @@
+ body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-image: url('discord.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+  }
+h1{
+    color: white;
+    text-align: center;
+
+}
+form{
+    
+    padding: 50px;
+    
+}
+input{
+        width: 300px;
+        background-color:white;
+        border: 0;
+        height: 25px;
+}
+label{
+    color:white;
+}
+button{
+     margin-left: 30%;
+     color: rgb(251, 245, 245);
+     background-color: rgb(51, 51, 176);
+     width:100px;
+     cursor: pointer;
+}
+button:hover{
+    background-color: rgb(144, 144, 161);
+    color: rgb(238, 236, 236);
+    transition: 0.2s;
+}
+div{
+    
+    background-color: rgb(55, 53, 53);
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+span{
+    color: red;
+}  

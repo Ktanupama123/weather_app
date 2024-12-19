@@ -1,0 +1,77 @@
+{% extends "home.html" %}
+{% block content %}
+{% include "navbar.html" %}
+<form method="POST">
+{% csrf_token %}
+<div class="w-full h-full flex items-center justify-center p-10">
+    
+        <div class="relative w-1/2 flex items-center ">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute w-5 h-5 top-2.5 left-2.5 text-slate-600">
+                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+            </svg>
+            
+            <input
+                class="w-full bg-red-100 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-10 pr-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow hover:shadow-lg"
+                placeholder="Search"
+                name='city'
+            />
+
+
+            <button type="submit" class="rounded-md px-3 py-2 text-sm font-semibold text-white bg-blue-400 hover:bg-green-400 hover:text-black ml-3 w-1/2">
+            Search 
+            </button>
+                
+        </div>
+    </div>
+</form>  
+{% comment %} <h1>{{description}}</h1> 
+<img src="http://openweathermap.org/img/w/{{icon}}.png" alt="weather icon">
+<h1>{{temp}}</h1>
+<h1>{{day}}</h1>
+<h1>{{city}}</h1> {% endcomment %}
+<!-- component -->
+<div class=" flex item-center justify-center mt-50">
+    <div class="flex flex-col bg-blue-200 rounded p-4  max-w-xs">
+                            <div class="font-bold text-xl"name="city">{{city}}</div>
+                            <div class="text-sm text-gray-500"name="day">{{day}}</div>
+                            <img class="w-12"src="http://openweathermap.org/img/w/{{icon}}.png" alt="weather icon">
+                            {% comment %} <div class="mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24">
+    <svg class="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                            </div> {% endcomment %}
+                            <div class="flex flex-row items-center justify-center mt-6 ">
+                                <div class="font-medium text-sm"name='description'>{{description}}</div>
+                                <div class="font-medium text-6xl"name='temp'>{{temp}}</div>
+                                
+                                {% comment %} <div class="flex flex-col items-center ml-6"> {% endcomment %}
+                                    {% comment %} <div></div>
+                                    <div class="mt-1">
+                                        <span class="text-sm"><i class="far fa-long-arrow-up"></i></span>
+                                        <span class="text-sm font-light text-gray-500">28°C</span>
+                                    </div>
+                                    <div> {% endcomment %}
+                                        {% comment %} <span class="text-sm"><i class="far fa-long-arrow-down"></i></span>
+                                        <span class="text-sm font-light text-gray-500">20°C</span>
+                                    </div>
+                                </div>
+                            </div> {% endcomment %}
+                            {% comment %} <div class="flex flex-row justify-between mt-6">
+                                <div class="flex flex-col items-center">
+                                    <div class="font-medium text-sm">Wind</div>
+                                    <div class="text-sm text-gray-500">9k/h</div>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="font-medium text-sm">Humidity</div>
+                                    <div class="text-sm text-gray-500">68%</div>
+                                </div> {% endcomment %}
+                                {% comment %} <div class="flex flex-col items-center">
+                                    <div class="font-medium text-sm">Visibility</div>
+                                    <div class="text-sm text-gray-500">10km</div>
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+    </div>
+
+
+{% comment %} <h1>description={{}}</h1> {% endcomment %}
+{% endblock content %}
